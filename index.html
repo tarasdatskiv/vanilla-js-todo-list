@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <p class="header__label">DAILY FOCUS</p>
+        <h1>What matters today</h1>
+        <p class="header__tasks">0 tasks remaining</p>
+    </header>
+    <main>
+        <form class="new-task-form">
+            <input class="task-form__input" type="text" placeholder="Add a new task...">
+
+            <div class="task-form__priorities">
+                <button type="button" class="task-form__priority task-form__priority--low selected"
+                    data-priority="low">Low</button>
+                <button type="button" class="task-form__priority task-form__priority--medium"
+                    data-priority="medium">Medium</button>
+                <button type="button" class="task-form__priority task-form__priority--high"
+                    data-priority="high">High</button>
+            </div>
+
+            <button class="task-form__submit" type="submit">Add</button>
+        </form>
+
+        <div class="task-filters">
+            <button type="button" class="task-filters__all task-filters__button--selected">All ()</button>
+            <button type="button" class="task-filters__active">Active ()</button>
+            <button type="button" class="task-filters__done">Done ()</button>
+        </div>
+        <ul class="tasks-list">
+            <li><span class="circle circle--low"></span> <button class="task-item__check" type="button"
+                    aria-label="Позначити виконаним">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>Read a chapter of The Ministry for the Future <button class="task-item__delete" type="button"
+                    aria-label="Видалити завдання">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </button></li>
+        </ul>
+    </main>
+
+    <footer>
+        <button class="clear-tasks">Clear completed</button>
+    </footer>
+</body>
+<script src="main.js"></script>
+
+</html>
